@@ -1,0 +1,234 @@
+/* Auth pages */
+.login-page,
+.register-page {
+  min-height: calc(100vh - 74px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background: #f6fafb;
+}
+
+/* Auth cards */
+.login-card,
+.register-card {
+  width: 100%;
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid #e3edf0;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(54, 95, 118, 0.1);
+}
+
+.login-card {
+  max-width: 430px;
+}
+
+.register-card {
+  max-width: 450px;
+}
+
+/* Auth header */
+.login-header,
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-header h1,
+.register-header h1 {
+  margin: 0 0 7px;
+  color: #243f4f;
+  font-size: 28px;
+}
+
+.login-header p,
+.register-header p {
+  color: #758993;
+  font-size: 14px;
+}
+
+/* Auth messages */
+.login-error,
+.register-error,
+.register-success {
+  margin-bottom: 18px;
+  padding: 11px 13px;
+  border-radius: 7px;
+  font-size: 13px;
+}
+
+.login-error,
+.register-error {
+  color: #b42318;
+  background: #fff4f3;
+  border: 1px solid #f3c5c1;
+}
+
+.register-success {
+  color: #276749;
+  background: #f0faf4;
+  border: 1px solid #b7e4c7;
+}
+
+/* Auth forms */
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.login-form-group,
+.register-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.login-form-group label,
+.register-form-group label {
+  color: #365f76;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-form-group input,
+.register-form-group input {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #d6e3e8;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #243f4f;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-form-group input::placeholder,
+.register-form-group input::placeholder {
+  color: #9aaab1;
+}
+
+.login-form-group input:focus,
+.register-form-group input:focus {
+  border-color: #365f76;
+  box-shadow: 0 0 0 3px rgba(54, 95, 118, 0.1);
+  outline: none;
+}
+
+/* Auth buttons */
+.login-btn,
+.register-btn {
+  width: 100%;
+  margin-top: 5px;
+  padding: 12px;
+  border: none;
+  border-radius: 7px;
+  background: #365f76;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.login-btn:hover:not(:disabled),
+.register-btn:hover:not(:disabled) {
+  background: #294c60;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(54, 95, 118, 0.2);
+}
+
+.login-btn:disabled,
+.register-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* OTP information */
+.otp-info {
+  padding: 12px;
+  text-align: center;
+  background: #edf5f7;
+  border-radius: 7px;
+  color: #758993;
+  font-size: 13px;
+}
+
+.otp-info strong {
+  display: block;
+  margin-top: 4px;
+  color: #365f76;
+}
+
+/* Auth links */
+.register-text,
+.login-text {
+  margin: 25px 0 0;
+  text-align: center;
+  color: #758993;
+  font-size: 13px;
+}
+
+.register-text a,
+.login-text a {
+  color: #365f76;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-text a:hover,
+.login-text a:hover {
+  color: #294c60;
+  text-decoration: underline;
+}
+
+.resend-otp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  color: #718096;
+  font-size: 0.95rem;
+}
+
+.resend-otp-btn {
+  border: none;
+  background: transparent;
+  color: #35657d;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.resend-otp-btn:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+.resend-otp-btn:disabled {
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .login-page,
+  .register-page {
+    padding: 35px 15px;
+  }
+
+  .login-card,
+  .register-card {
+    padding: 30px 22px;
+  }
+
+  .login-header h1,
+  .register-header h1 {
+    font-size: 25px;
+  }
+}

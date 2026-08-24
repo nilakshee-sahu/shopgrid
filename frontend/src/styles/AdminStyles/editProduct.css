@@ -1,0 +1,259 @@
+.edit-product-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.edit-product-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.edit-product-header h1 {
+  margin: 12px 0 8px;
+  color: #234d68;
+  font-size: 42px;
+}
+
+.edit-product-header p {
+  margin: 0;
+  color: #7189a0;
+  font-size: 16px;
+}
+
+.admin-tag {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #edf6f9;
+  color: #315f7a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.back-products-btn {
+  padding: 12px 20px;
+  border: 1px solid #d6e4ea;
+  border-radius: 8px;
+  color: #315f7a;
+  background: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-products-btn:hover {
+  background: #edf6f9;
+}
+
+.edit-product-error,
+.edit-product-success {
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.edit-product-error {
+  color: #b42318;
+  background: #fff1f1;
+  border: 1px solid #f5c2c2;
+}
+
+.edit-product-success {
+  color: #18794e;
+  background: #edf9f2;
+  border: 1px solid #b9e4ca;
+}
+
+.edit-product-form {
+  padding: 30px;
+  border: 1px solid #dce8ed;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(35, 77, 104, 0.06);
+}
+
+.edit-product-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+}
+
+.form-section {
+  padding: 25px;
+  border: 1px solid #e0eaee;
+  border-radius: 12px;
+}
+
+.form-section h2 {
+  margin: 0 0 25px;
+  color: #234d68;
+  font-size: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  color: #315f7a;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1px solid #cddde4;
+  border-radius: 8px;
+  outline: none;
+  color: #234d68;
+  background: #fff;
+  font: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #47718a;
+  box-shadow: 0 0 0 3px rgba(71, 113, 138, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.current-image {
+  margin-bottom: 25px;
+}
+
+.current-image p {
+  margin: 0 0 10px;
+  color: #315f7a;
+  font-weight: 600;
+}
+
+.current-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid #e0eaee;
+  border-radius: 10px;
+  background: #f8fbfc;
+}
+
+.selected-image {
+  margin-top: 10px;
+  color: #7189a0;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.edit-product-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #e0eaee;
+}
+
+.cancel-btn,
+.save-product-btn {
+  padding: 13px 25px;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cancel-btn {
+  border: 1px solid #d2e0e6;
+  color: #315f7a;
+  background: #fff;
+}
+
+.cancel-btn:hover {
+  background: #f4f8fa;
+}
+
+.save-product-btn {
+  border: none;
+  color: #fff;
+  background: #315f7a;
+}
+
+.save-product-btn:hover {
+  background: #234d68;
+}
+
+.save-product-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.edit-product-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  color: #7189a0;
+}
+
+@media (max-width: 800px) {
+  .edit-product-page {
+    padding: 40px 15px;
+  }
+
+  .edit-product-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .edit-product-header h1 {
+    font-size: 34px;
+  }
+
+  .edit-product-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .edit-product-form {
+    padding: 18px;
+  }
+
+  .form-section {
+    padding: 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .edit-product-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-btn,
+  .save-product-btn {
+    text-align: center;
+  }
+}

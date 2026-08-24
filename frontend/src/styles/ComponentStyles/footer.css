@@ -1,0 +1,141 @@
+/* Footer */
+.footer {
+  width: 100%;
+  background: #365f76;
+  color: #ffffff;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 55px 6% 45px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 80px;
+}
+
+/* Brand */
+.footer-brand {
+  max-width: 420px;
+}
+
+.footer-logo {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 15px;
+  transition: color 0.25s ease;
+}
+
+.footer-logo:hover {
+  color: #b8d2dc;
+}
+
+.footer-brand p {
+  margin: 0;
+  color: #d9e7ec;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Footer Section */
+.footer-section h3 {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer-links li a {
+  color: #d9e7ec;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+.footer-links li a:hover {
+  color: #ffffff;
+  padding-left: 5px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #c8dbe2;
+  font-size: 13px;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 45px 6% 35px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    text-align: center;
+    padding: 40px 7% 30px;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+
+  .footer-links li a:hover {
+    padding-left: 0;
+  }
+
+  .footer-logo {
+    font-size: 27px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+  .footer-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .footer-brand p {
+    font-size: 13px;
+  }
+
+  .footer-links li a {
+    font-size: 13px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}

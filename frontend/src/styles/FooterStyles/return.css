@@ -1,0 +1,87 @@
+/* Return Policy */
+.policy-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  color: #243f4f;
+}
+
+/* Policy Hero */
+.policy-hero {
+  padding: 75px 6%;
+  background: #f6fafb;
+  text-align: center;
+}
+
+.policy-tag {
+  display: inline-block;
+  padding: 7px 14px;
+  background: #edf5f7;
+  color: #365f76;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.policy-hero h1 {
+  margin: 15px 0 12px;
+  font-size: clamp(38px, 5vw, 55px);
+  line-height: 1.1;
+}
+
+.policy-hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #647b87;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Policy Content */
+.policy-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 6% 80px;
+}
+
+.policy-updated {
+  margin-bottom: 35px;
+  color: #758993;
+  font-size: 13px;
+}
+
+.policy-section {
+  margin-bottom: 35px;
+}
+
+.policy-section h2 {
+  margin-bottom: 12px;
+  color: #365f76;
+  font-size: 21px;
+}
+
+.policy-section p {
+  color: #647b87;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .policy-hero {
+    padding: 55px 7%;
+  }
+
+  .policy-hero h1 {
+    font-size: 38px;
+  }
+
+  .policy-content {
+    padding: 45px 7% 65px;
+  }
+
+  .policy-section h2 {
+    font-size: 19px;
+  }
+}
