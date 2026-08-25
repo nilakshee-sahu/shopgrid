@@ -29,7 +29,6 @@
       "react-app/jest"
     ]
   },
-  "proxy": "https://shopgrid-3joz.onrender.com",
   "browserslist": {
     "production": [
       ">0.2%",
