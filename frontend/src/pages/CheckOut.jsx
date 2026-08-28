@@ -4,6 +4,7 @@ import { AuthContext } from "../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import { clearCart } from "../redux/cartSlice";
 import "../styles/checkout.css";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const Checkout = () => {
   const { user } = useContext(AuthContext);
@@ -187,7 +188,7 @@ const Checkout = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/orders", {
+      const response = await fetch(`${API_URL}/api/orders`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

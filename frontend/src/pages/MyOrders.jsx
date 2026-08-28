@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import "../styles/myOrders.css";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const MyOrders = () => {
   const { user } = useContext(AuthContext);
@@ -17,7 +18,7 @@ const MyOrders = () => {
       }
 
       try {
-        const response = await fetch("/api/orders/myorders", {
+        const response = await fetch(`${API_URL}/api/orders/myorders`, {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/AdminStyles/AdminProducts.css";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const AdminProducts = () => {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const AdminProducts = () => {
       setLoading(true);
       setError("");
 
-      const response = await fetch("/api/products");
+      const response = await fetch(`${API_URL}/api/products`);
 
       if (!response.ok) {
         throw new Error("Failed to fetch products");
@@ -41,7 +42,7 @@ const AdminProducts = () => {
       const userInfo = JSON.parse(localStorage.getItem("userInfo"));
       const token = userInfo?.token;
 
-      const response = await fetch(`/api/products/${id}`, {
+      const response = await fetch(`${API_URL}/api/products/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

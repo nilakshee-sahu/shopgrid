@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext.jsx";
 import "../styles/AdminStyles/adminDashboard.css";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const AdminDashboard = () => {
   const { user } = useContext(AuthContext);
@@ -25,7 +26,7 @@ const AdminDashboard = () => {
       }
 
       try {
-        const response = await fetch("/api/analytics", {
+        const response = await fetch(`${API_URL}/api/analytics`, {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },

@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import "../styles/productDetail.css";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -18,7 +19,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await fetch(`/api/products/${id}`);
+        const res = await fetch(`${API_URL}/api/products/${id}`);
 
         if (!res.ok) {
           throw new Error("Failed to fetch product");

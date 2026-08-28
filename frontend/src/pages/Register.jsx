@@ -68,40 +68,41 @@ const Register = () => {
 
   // Verify OTP
   const handleVerifyOtp = async (e) => {
-    e.preventDefault();
-    setError("");
-    setSuccess("");
-    setLoading(true);
+  e.preventDefault();
+  setError("");
+  setSuccess("");
 
-    try {
-      const response = await fetch(`${API_URL}/api/auth/verify-email`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, otp }),
-      });
+  if (otp.length !== 6) {
+    setError("Please enter a valid 6-digit OTP");
+    return;
+  }
 
-      if (otp.length !== 6) {
-        setError("Please enter a valid 6-digit OTP");
-        return;
-      }
+  setLoading(true);
 
-      const data = await response.json();
+  try {
+    const response = await fetch(`${API_URL}/api/auth/verify-email`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, otp }),
+    });
 
-      if (!response.ok) {
-        throw new Error(data.message || "OTP verification failed");
-      }
+    const data = await response.json();
 
-      setSuccess("Email verified successfully. You can now login.");
-
-      setTimeout(() => navigate("/login"), 1500);
-    } catch (error) {
-      setError(error.message);
-    } finally {
-      setLoading(false);
+    if (!response.ok) {
+      throw new Error(data.message || "OTP verification failed");
     }
-  };
+
+    setSuccess("Email verified successfully. You can now login.");
+
+    setTimeout(() => navigate("/login"), 1500);
+  } catch (error) {
+    setError(error.message);
+  } finally {
+    setLoading(false);
+  }
+};
 
   // Resend OTP
   const handleResendOtp = async () => {

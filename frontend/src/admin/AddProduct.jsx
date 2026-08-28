@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/AdminStyles/addProduct.css";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const AddProduct = () => {
   const navigate = useNavigate();
@@ -58,7 +59,7 @@ const AddProduct = () => {
         data.append("imageURL", imageURL.trim());
       }
 
-      const response = await fetch("/api/products", {
+      const response = await fetch(`${API_URL}/api/products`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

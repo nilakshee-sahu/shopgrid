@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext.jsx";
 import "../styles/AdminStyles/adminUsers.css";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const AdminUsers = () => {
   const { user } = useContext(AuthContext);
@@ -19,7 +20,7 @@ const AdminUsers = () => {
       }
 
       try {
-        const response = await fetch("/api/auth/users", {
+        const response = await fetch(`${API_URL}/api/auth/users`, {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },

@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext.jsx";
 import "../styles/AdminStyles/editProduct.css";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const EditProduct = () => {
   const { id } = useParams();
@@ -26,7 +27,7 @@ const EditProduct = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`/api/products/${id}`);
+        const response = await fetch(`${API_URL}/api/products/${id}`);
         const data = await response.json();
 
         if (!response.ok) {

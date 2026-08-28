@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/AdminStyles/adminOrders.css";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const AdminOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -12,7 +13,7 @@ const AdminOrders = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await fetch("/api/orders", {
+      const response = await fetch(`${API_URL}/api/orders`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -43,7 +44,7 @@ const AdminOrders = () => {
 
       const token = localStorage.getItem("token");
 
-      const response = await fetch(`/api/orders/${orderId}/status`, {
+      const response = await fetch(`${API_URL}/api/orders/${orderId}/status`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
