@@ -95,7 +95,7 @@ const EditProduct = () => {
         formData.append("image", image);
       }
 
-      const response = await fetch(`/api/products/${id}`, {
+      const response = await fetch(`${API_URL}/api/products/${id}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${user.token}`,
@@ -103,7 +103,14 @@ const EditProduct = () => {
         body: formData,
       });
 
-      const data = await response.json();
+      const text = await response.text();
+      let data = {};
+
+      try {
+        data = text ? JSON.parse(text) : {};
+      } catch {
+        throw new Error("Server returned an invalid response");
+      }
 
       if (!response.ok) {
         throw new Error(data.message || "Failed to update product");
