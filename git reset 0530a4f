@@ -1,0 +1,19 @@
+[33m0530a4f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Check Mail function in sendEmail utils
+[33m8b32d84[m Refactor sendEmail function to await transporter.sendMail and improve error handling
+[33mb72b781[m Fix API_URL usage in EditProduct component and improve error handling for server responses
+[33m4cfde67[m Enhance Login component with OTP verification and resend functionality; add styling
+[33m3dd1438[m Update API calls in admin and pages components to use environment variable for API_URL
+[33mae29258[m Update API calls in Login and Register components to use environment variable for API_URL
+[33m90d2219[m Remove proxy URL from package.json
+[33mb506f22[m Refactor Register component to remove API_URL variable and use direct fetch calls
+[33m43df5b2[m Merge branch 'main' of https://github.com/nilakshee-sahu/shopgrid
+[33mcc5da4b[m Update API endpoints in Register component to use environment variable
+[33m4d3dc2d[m Remove trailing slash from proxy target URL
+[33mb0780e0[m Add products data in seed
+[33m0711358[m Add serve dependency to package.json
+[33mcf99186[m Update proxy target to use production URL
+[33m376b715[m Fix typo in authMiddleware import across multiple route files
+[33mc62078e[m Fix backend deployment configuration
+[33m26696d3[m Fix Cloudinary dependency conflict
+[33mace6a52[m Fix frontend repository structure
+[33meb3c609[m Adding complete backend and frontend folder
